@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".CRUDKrs"></activity>
+        <activity android:name=".RecyclerKls"></activity>
+        <activity android:name=".Main3Activity" />
+        <activity android:name=".CRUDMatkul" />
+        <activity android:name=".CRUDMhs" />
+        <activity android:name=".CRUDKrs" />
         <activity android:name=".CRUDDosen" />
         <activity android:name=".MenuAdmin" />
         <activity android:name=".MenuDosen" />
@@ -21,6 +25,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".RecyclerDsnActivity" />
+        <activity android:name=".RecyclerMhsActivity" />
+        <activity android:name=".RecyclerKrsActivity" />
+        <activity android:name=".RecyclerMatkulActivity" />
     </application>
 
 </manifest>

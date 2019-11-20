@@ -3,6 +3,7 @@ package prototypeprogmob.com.Adapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -31,9 +32,11 @@ public class DosenAdapter extends RecyclerView.Adapter<DosenAdapter.ViewHolder>{
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+        holder.txtNidn.setText(dsnArrayList.get(position).getNidn());
         holder.txtNama.setText(dsnArrayList.get(position).getNama());
-        holder.txtNohp.setText(dsnArrayList.get(position).getNohp());
-        holder.txtNpm.setText(dsnArrayList.get(position).getNpm());
+        holder.txtEmail.setText(dsnArrayList.get(position).getEmail());
+        holder.txtAlamat.setText(dsnArrayList.get(position).getAlamat());
+//        holder.ImgDsn.setImageResource(dsnArrayList.get(position).getImgDsn());
     }
 
     @Override
@@ -42,14 +45,17 @@ public class DosenAdapter extends RecyclerView.Adapter<DosenAdapter.ViewHolder>{
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder{
-        private TextView txtNama, txtNohp, txtNpm;
+        private TextView txtNidn, txtNama, txtEmail, txtAlamat;
+//        ImageView ImgDsn;
 
         public ViewHolder(View view){
             super(view);
 
-            txtNama = view.findViewById(R.id.txt_nama_mahasiswa);
-            txtNpm = view.findViewById(R.id.txt_npm_mahasiswa);
-            txtNohp = view.findViewById(R.id.txt_nohp_mahasiswa);
+            txtNidn = view.findViewById(R.id.txtNidn);
+            txtNama = view.findViewById(R.id.txtNama);
+            txtEmail = view.findViewById(R.id.txtEmail);
+            txtAlamat = view.findViewById(R.id.txtAlamat);
+//            ImgDsn = view.findViewById(R.id.ImgDsn);
         }
     }
 }
